@@ -81,3 +81,19 @@
     height: 25rem;
     }
 }
+@media(max-width:640px){
+    .hero-container{
+        margin-top: 2rem;
+    }
+    .hero-title>h1{
+        font-size:2.5rem;
+        line-height:3rem;
+    }
+    .image-container{
+        width: 95%;
+        height: 25rem;
+    }
+    .hero-right{
+        width:100%;
+    }
+}

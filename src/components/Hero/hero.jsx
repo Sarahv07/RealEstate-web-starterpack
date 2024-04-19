@@ -1,5 +1,6 @@
 import React from 'react';
-import "./Hero.css"
+import "./Hero.css";
+import {motion} from 'framer-motion';
 const Hero = () => {
     return (
     <section className="hero-wrapper">
@@ -8,7 +9,13 @@ const Hero = () => {
             <div className="flexColStart hero-left">
                 <div className="hero-title">
                     <div className="orange-circle"/>
-                    <h1>Your story deserves <br/>a great frame.</h1>
+                    <motion.h1
+                    initial={{y:"2rem", opacity:0}}
+                    animate={{y:0,opacity:1}}
+                    transition={{
+                        duration:2,
+                        type:"spring"
+                    }}>Your story deserves <br/>a great frame.</motion.h1>
                 </div>
 
                 <div className="flexColStart hero-des">
@@ -20,12 +27,19 @@ const Hero = () => {
             </div>
             
             {/*right side*/}
-            <div className="flexCenter hero-right">
+            <motion.div
+            initial={{x:"7rem", opacity:0}}
+            animate={{x:0,opacity:1}}
+            transition={{
+                duration:2,
+                type:"spring"
+            }}
+            className="flexCenter hero-right">
                 <div className="image-container">
                     <img src="./main-image.png" alt="main" />
                 </div>
 
-            </div>
+            </motion.div>
         </div>
 
     </section>
