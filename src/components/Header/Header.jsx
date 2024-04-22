@@ -1,46 +1,58 @@
-import React, { useState } from 'react';
-import './Header.css'
-import {BiMenuAltRight} from 'react-icons/bi'
-import OutsideClickHandler from "react-outside-click-handler";
-const Haeder = () => {
-  const [menuOpened, setMenuOpened]= useState(false)
+import React, { useState, useEffect } from 'react';
+import './Header.css';
+import { BiMenuAltRight } from 'react-icons/bi';
+import OutsideClickHandler from 'react-outside-click-handler';
+import { NavLink } from 'react-router-dom';
 
-  const getMenuStyles=(menuOpened)=>{
-    if(document.documentElement.clientWidth<=800)
-    {
-      return {right:!menuOpened && "-100%"}
+const Header = () => {
+  const [menuOpened, setMenuOpened] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(document.documentElement.clientWidth <= 800);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const getMenuStyles = () => {
+    if (isMobile) {
+      return { right: menuOpened ? '0%' : '-100%' };
     }
-  }
+  };
+
   return (
     <div>
       <section className='h-wrapper'>
         <div className="flexCenter paddings innerWidth h-container">
+          <img src="./logo.png" alt="logo" width={200} />
 
-          <img src="./logo.png" alt="logo" width={200}/>
-
-          <OutsideClickHandler 
-          onOutsideClick={()=>{
-            setMenuOpened(false)
-          }}>
-
-          <div className="flexCenter h-menu"
-          style={getMenuStyles(menuOpened)}
-          >
-              <a href="">Home </a>
-              <a href="">Gallery </a>
+          <OutsideClickHandler onOutsideClick={() => setMenuOpened(false)}>
+            <div className="flexCenter h-menu" style={getMenuStyles()}>
+              <NavLink exact to="/" activeClassName="active" onClick={() => setMenuOpened(false)}>Home</NavLink>
+              <NavLink to="/gallery" activeClassName="active" onClick={() => setMenuOpened(false)}>Gallery</NavLink>
               <button className='button'>
-                <a href="">contact</a>
-              </button>            
-          </div>
+                <NavLink to="/subscribe" activeClassName="active" onClick={() => setMenuOpened(false)}>Subscribe</NavLink>
+              </button>
+            </div>
           </OutsideClickHandler>
 
-          <div className="menu-icon" onClick={()=>setMenuOpened((prev)=>!prev)}>
-          <BiMenuAltRight size={30}/>
-          </div>
+          {isMobile && (
+            <div className="menu-icon" onClick={() => setMenuOpened((prev) => !prev)}>
+              <BiMenuAltRight size={30} />
+            </div>
+          )}
         </div>
       </section>
     </div>
   );
-}
+};
 
-export default Haeder;
+export default Header;

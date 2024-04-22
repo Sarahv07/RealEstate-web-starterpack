@@ -1,20 +1,13 @@
-import Header from './components/Header/Header';
-import Hero from'./components/hero/hero';
-import './App.css'
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
+import React from 'react';
+import HomePage from './pages/HomePage';
+import './App.css';
+import AppRouter from './AppRouter';
+
 function App() {
   return (
     <div className="App">
-      <div>
-        <div className="white-gradient"/>
-        <Header/>
-        <Hero/>
-      </div>
-      <Contact/>
-      <Footer/>
+      <AppRouter/>
     </div>
-
   );
 }
 

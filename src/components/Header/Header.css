@@ -26,6 +26,10 @@
 .menu-icon{
     display:none;
 }
+.h-menu a.active {
+    color: #ffffff;  
+    font-weight: bold; 
+}
 @media (max-width:768px){ 
     .menu-icon{
         display:block;

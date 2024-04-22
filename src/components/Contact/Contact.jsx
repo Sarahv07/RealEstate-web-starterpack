@@ -14,10 +14,10 @@ const Contact = () => {
                 </div>
                 <div>
                     <span className='orangeText'>Let's Talk Photography</span><br/>
-                    <span className='primaryText'>So what's in store for YOU...</span><br/>
+                    <span className='primaryText'>So what's in store for YOU...</span><br/><br/>
                     <ul class="benefits-list">
-                        <li>We create captivating visuals that go beyond snapshots, evoking emotions and memories.</li>
-                        <li>We freeze time in beautiful frames, preserving life's precious moments for generations to come. </li>
+                        <li>Captivating visuals that go beyond snapshots, evoking emotions.</li>
+                        <li>We freeze time in beautiful frames, preserving life's precious moments. </li>
                         <li>Experience you can trust for lasting memories.</li>
                     </ul>
                 </div>

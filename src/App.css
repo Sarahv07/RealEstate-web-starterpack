@@ -1,14 +1,29 @@
 .App{
     position: relative;
-    overflow-x:clip;
+    overflow-x:hidden;
+    background-color: white;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
-.App>:nth-child(1)
-{
-    background:var(--black);
-    position:relative;
+.App > :nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top:5.2%;
+    left: 0;
+    right: 0;
+    bottom: 64%; 
+    background: var(--black);
+    z-index: 1; 
+}
+
+.App > :nth-child(1) {
+    position: relative;
+    z-index: 2; /* Ensure the child content is above the black overlay */
 }
 .white-gradient{
     position:absolute;
+    z-index: 3;
     width:10rem;
     height:10rem;
     background:rgba(255, 255, 255, 0.522);
