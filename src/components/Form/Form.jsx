@@ -1,20 +1,39 @@
-import React from 'react'
+import React from 'react';
+import './Form.css'; // Import the external CSS file
 
 const Form = () => {
     return (
-    <div className='max-w-[1240px] m-auto p-4 h-screen'>
-        <h1 className='text-2xl font-bold text-center p-4'>Let's work together</h1>
-        <form className='max-w-[600px] m-auto'>
-        <div className='grid grid-cols-2 gap-2'>
-            <input className='border shadow-lg p-3'  type="text" placeholder="Name"/>
-            <input className='border shadow-lg p-3' type="email" placeholder="Email"/>
+        <div className='flex items-center justify-center min-h-screen bg-gray-100'>
+            <div className='flex-container'>
+                <div className='form-container'>
+                    <h1 className='text-2xl font-bold mb-4'>Lens Ready? Let's Book Your Shoot Now!</h1><br/>
+                    <form className='space-y-4'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                            <div>
+                                <input className='input-field' type="text" placeholder="Name" />
+                            </div>
+                            <div>
+                                <input className='input-field' type="email" placeholder="Email" />
+                            </div>
+                        </div>
+                        <div>
+                            <input className='input-field' type="text" placeholder="Phone Number" />
+                        </div>
+                        <div>
+                            <input className='input-field' type="text" placeholder="Photography Style" />
+                        </div>
+                        <div>
+                            <textarea className='input-field' cols={30} rows={6} placeholder="Message"></textarea>
+                        </div>
+                        <button className='submit-button'>Submit</button>
+                    </form>
+                </div>
+                <div className='image-container2'>
+                    <img src='./form.jpeg' alt='Background' className='image' />
+                </div>
+            </div>
         </div>
-        <input className='border shadow-lg p-3 w-full my-2' type="text" placeholder="Subject"/>
-        <textarea className='border shadow-lg p-3 w-full' cols={30} rows={10} placeholder="Message"></textarea>
-        <button className='border shadow-lg p-3 w-full mt-2'>Submit</button>
-        </form>
-    </div>
-    )
+    );
 }
 
-export default Form
+export default Form;

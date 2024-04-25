@@ -39,7 +39,7 @@ const Header = () => {
               <NavLink exact to="/" activeClassName="active" onClick={() => setMenuOpened(false)}>Home</NavLink>
               <NavLink to="/gallery" activeClassName="active" onClick={() => setMenuOpened(false)}>Gallery</NavLink>
               <button className='button'>
-                <NavLink to="/subscribe" activeClassName="active" onClick={() => setMenuOpened(false)}>Subscribe</NavLink>
+                <NavLink to="/subscribe" activeClassName="active" onClick={() => setMenuOpened(false)}>Book Now</NavLink>
               </button>
             </div>
           </OutsideClickHandler>
