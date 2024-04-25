@@ -1,0 +1,51 @@
+.product--image {
+  width: 100%;
+  object-fit: cover;
+  background-color: black;
+  
+}
+
+h2{
+  color: black;
+  background-color: rgba(255,255,255,0);
+  font-size: 30px;
+  
+}
+.foreground-text p{
+  margin-top: -4%;
+  background-color: rgba(255,255,255,0);
+  color: black;
+  font-size: large;
+  padding-top: 2%;
+}
+.foreground-text{
+  background-color: rgba(255,255,255,0.5);
+  width: 75%;
+  text-align: left;
+  max-width: 50%;
+  margin-top: -15%;
+  margin-left: 18%;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition:  0.3s ease-in-out;
+  border-radius: 5%;
+  
+}
+.background-image{
+  position: relative;
+  z-index: 1;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  margin: auto 1rem;
+  text-align: center;
+  font-family: arial;
+  padding: 4%;
+}
+
+.foreground-text:hover {
+  transform: scale(1.05);
+  background-color: rgba(255,255,255,.8);
+}

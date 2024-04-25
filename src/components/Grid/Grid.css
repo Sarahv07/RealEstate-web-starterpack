@@ -1,0 +1,10 @@
+.stylingbox{
+  color: white;
+}
+.keyBox{
+  cursor: pointer; 
+  transition:  1s ease-in;
+}
+.keyBox :hover{
+  transform: scale(1.02);
+}

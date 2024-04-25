@@ -1,0 +1,18 @@
+.image-styles {
+  width:30%;
+  max-height:10em;
+}
+.textstyles{
+  background-color: white;
+  padding-left: 5%;
+}
+.title-text {
+  font-size: 35px; 
+  color: #ff0000; 
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif; 
+}
+.description{
+  font-size: 24px;
+  font-style: italic;
+}

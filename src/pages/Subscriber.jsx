@@ -1,10 +1,10 @@
 import React from 'react';
+import Form from '../components/Form/Form';
 
 function Subscribe() {
     return (
     <div>
-        <h1>Subscribe</h1>
-      {/* Subscribe content */}
+        <Form/>
     </div>
     );
 }
